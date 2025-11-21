@@ -207,33 +207,41 @@ do
 
 	local IconList = loadstring(game:HttpGet('https://raw.githubusercontent.com/Dummyrme/Library/refs/heads/main/Icon.lua'))()
 	function gl(i)
-		local iconData = IconList.Icons[i]
-		if iconData then
-			local spriteSheet = IconList.Spritesheets[tostring(iconData.Image)]
-			if spriteSheet then
-				return {
-					Image = spriteSheet,
-					ImageRectSize = iconData.ImageRectSize,
-					ImageRectPosition = iconData.ImageRectPosition,
-				}
-			end
-		end
-		if type(i) == 'string' and not i:find('rbxassetid://') then
-			return {
-				Image = "rbxassetid://".. i,
-				ImageRectSize = Vector2.new(0, 0),
-				ImageRectPosition = Vector2.new(0, 0),
-			}
-		elseif type(i) == 'number' then
-			return {
-				Image = "rbxassetid://".. i,
-				ImageRectSize = Vector2.new(0, 0),
-				ImageRectPosition = Vector2.new(0, 0),
-			}
-		else
-			return i
-		end
-	end
+    if type(i) == 'string' and i:find('roblox.com/Thumbs/Asset') then
+        return {
+            Image = i,
+            ImageRectSize = Vector2.new(0, 0),
+            ImageRectPosition = Vector2.new(0, 0),
+        }
+    end
+    
+    local iconData = IconList.Icons[i]
+    if iconData then
+        local spriteSheet = IconList.Spritesheets[tostring(iconData.Image)]
+        if spriteSheet then
+            return {
+                Image = spriteSheet,
+                ImageRectSize = iconData.ImageRectSize,
+                ImageRectPosition = iconData.ImageRectPosition,
+            }
+        end
+    end
+    if type(i) == 'string' and not i:find('rbxassetid://') then
+        return {
+            Image = "rbxassetid://".. i,
+            ImageRectSize = Vector2.new(0, 0),
+            ImageRectPosition = Vector2.new(0, 0),
+        }
+    elseif type(i) == 'number' then
+        return {
+            Image = "rbxassetid://".. i,
+            ImageRectSize = Vector2.new(0, 0),
+            ImageRectPosition = Vector2.new(0, 0),
+        }
+    else
+        return i
+    end
+end
 	function tw(info)
 		return Tw:Create(info.v,TweenInfo.new(info.t, info.s, Enum.EasingDirection[info.d]),info.g)
 	end
