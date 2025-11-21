@@ -1202,16 +1202,37 @@ function Library:Window(p)
 	UIListLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
 
 	Close_1.Name = "Close"
-	Close_1.Parent = Ct_1
-	Close_1.Active = true
-	Close_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	Close_1.BackgroundTransparency = 1
-	Close_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	Close_1.BorderSizePixel = 0
-	Close_1.LayoutOrder = 3
-	Close_1.Size = UDim2.new(0, 16,0, 16)
-	Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=110889430388322"
+Close_1.Parent = Ct_1
+Close_1.Active = true
+Close_1.BackgroundColor3 = Color3.fromRGB(29, 28, 38)  -- Background color
+Close_1.BackgroundTransparency = 0  -- Make background visible
+Close_1.BorderColor3 = Color3.fromRGB(0,0,0)
+Close_1.BorderSizePixel = 0
+Close_1.LayoutOrder = 3
+Close_1.Size = UDim2.new(0, 40, 0, 40)  -- 40x40 box
+Close_1.Image = ""  -- Clear the image
 
+-- Add stroke to the box
+local CloseStroke = Instance.new("UIStroke")
+CloseStroke.Parent = Close_1
+CloseStroke.Color = Color3.fromRGB(255, 255, 255)
+CloseStroke.Thickness = 1
+CloseStroke.Transparency = 0.8
+
+-- Add your picture
+local CloseIcon = Instance.new("ImageLabel")
+CloseIcon.Parent = Close_1
+CloseIcon.BackgroundTransparency = 1
+CloseIcon.Size = UDim2.new(0, 30, 0, 30)  -- Slightly smaller than box
+CloseIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
+CloseIcon.AnchorPoint = Vector2.new(0.5, 0.5)
+CloseIcon.Image = "rbxassetid://104036545755823"  -- Your icon
+
+-- Add corner for rounded look
+local UICorner = Instance.new("UICorner")
+UICorner.Parent = Close_1
+UICorner.CornerRadius = UDim.new(0, 6)
+	
 	ChSize_1.Name = "Size"
     ChSize_1.Parent = Ct_1
     ChSize_1.Active = true
