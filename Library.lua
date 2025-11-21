@@ -4674,7 +4674,7 @@ Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&a
     BackgroundCloseUI_1.BorderSizePixel = 0
     BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
     BackgroundCloseUI_1.Size = UDim2.new(1, 0,1, 0)
-    BackgroundCloseUI_1.ClipsDescendants = true
+    BackgroundCloseUI_1.ClipsDescendants = false
 
     addToTheme('Background', BackgroundCloseUI_1)
 
