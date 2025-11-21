@@ -207,14 +207,6 @@ do
 
 	local IconList = loadstring(game:HttpGet('https://raw.githubusercontent.com/Dummyrme/Library/refs/heads/main/Icon.lua'))()
 	function gl(i)
-    if type(i) == 'string' and i:find('roblox.com/Thumbs/Asset') then
-        return {
-            Image = i,
-            ImageRectSize = Vector2.new(0, 0),
-            ImageRectPosition = Vector2.new(0, 0),
-        }
-    end
-    
     local iconData = IconList.Icons[i]
     if iconData then
         local spriteSheet = IconList.Spritesheets[tostring(iconData.Image)]
@@ -240,8 +232,8 @@ do
         }
     else
         return i
-    end
-end
+        end
+	end
 	function tw(info)
 		return Tw:Create(info.v,TweenInfo.new(info.t, info.s, Enum.EasingDirection[info.d]),info.g)
 	end
@@ -4398,7 +4390,7 @@ function Library:Window(p)
         Size_1.BorderSizePixel = 0
         Size_1.Position = UDim2.new(1, 0,1, 0)
         Size_1.Size = UDim2.new(0, 40,0, 40) -- make it square (e.g., 40x40)
-        Size_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=104036545755823"
+        Size_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=110889430388322"
 
 		local SizeFrame = Instance.new("Frame")
 		local ImageLabel_1 = Instance.new("ImageLabel")
