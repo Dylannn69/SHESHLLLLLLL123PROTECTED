@@ -4637,7 +4637,7 @@ Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&a
 			})
 		end)
 
-		
+		do
     local CloseUI = p.CloseUIButton
     local CloseUIShadow = Instance.new("ImageLabel")
     local UIPaddingCloseUI_1 = Instance.new("UIPadding")
