@@ -4676,41 +4676,30 @@ function Library:Window(p)
 			BackgroundCloseUI_1.BorderSizePixel = 0
 			BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
 			BackgroundCloseUI_1.Size = UDim2.new(1, 0,1, 0)
-			BackgroundCloseUI_1.ClipsDescendants = true
+			UICornerCloseUI_1.Parent = BackgroundCloseUI_1
+            UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
 
 			addToTheme('Background', BackgroundCloseUI_1)
 
-			UICornerCloseUI_1.Name = "UICornerCloseUI"
-			UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-			UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
+            -- Add stroke to the background
+            local Stroke = Instance.new("UIStroke")
+            Stroke.Parent = BackgroundCloseUI_1
+            Stroke.Color = Color3.fromRGB(255, 255, 255)
+            Stroke.Thickness = 1
+            Stroke.Transparency = 0.8
 
-			FrameCloseUI_1.Name = "FrameCloseUI"
-			FrameCloseUI_1.Parent = BackgroundCloseUI_1
-			FrameCloseUI_1.AnchorPoint = Vector2.new(0, 1)
-			FrameCloseUI_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			FrameCloseUI_1.BackgroundTransparency = 0.8999999761581421
-			FrameCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
-			FrameCloseUI_1.BorderSizePixel = 0
-			FrameCloseUI_1.Position = UDim2.new(0, 0,1, 0)
-			FrameCloseUI_1.Size = UDim2.new(1, 0,0, 4)
+            -- ADD YOUR PICTURE
+            local CloseIcon = Instance.new("ImageLabel")
+            CloseIcon.Name = "CloseIcon"
+            CloseIcon.Parent = BackgroundCloseUI_1
+            CloseIcon.BackgroundTransparency = 1
+            CloseIcon.Size = UDim2.new(0, 30, 0, 30)
+            CloseIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
+            CloseIcon.AnchorPoint = Vector2.new(0.5, 0.5)
+            CloseIcon.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=124681933147191"
 
-			Title_1.Name = "Title"
-			Title_1.Parent = BackgroundCloseUI_1
-			Title_1.AutomaticSize = Enum.AutomaticSize.Y
-			Title_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			Title_1.BackgroundTransparency = 1
-			Title_1.BorderColor3 = Color3.fromRGB(0,0,0)
-			Title_1.BorderSizePixel = 0
-			Title_1.Size = UDim2.new(1, 0,1, 0)
-			Title_1.Font = Enum.Font.GothamBold
-			Title_1.Text = CloseUI.Text
-			Title_1.TextColor3 = Color3.fromRGB(255,255,255)
-			Title_1.TextSize = 12
-
-			addToTheme('Text & Icon', Title_1)
-
-			CloseUIShadow.Size = UDim2.new(0, Title_1.TextBounds.X + 40,0, 40)
-
+            addToTheme('Text & Icon', CloseIcon)
+		
 			local Click = click(CloseUIShadow)
 			lak(Click, CloseUIShadow)
 			Click.MouseButton1Click:Connect(function()
