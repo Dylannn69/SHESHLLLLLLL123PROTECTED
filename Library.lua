@@ -4638,66 +4638,66 @@ Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&a
 		end)
 
 		do
-    local CloseUI = p.CloseUIButton
-    local CloseUIShadow = Instance.new("ImageLabel")
-    local UIPaddingCloseUI_1 = Instance.new("UIPadding")
-    local BackgroundCloseUI_1 = Instance.new("ImageButton")  -- Changed to ImageButton
+            local CloseUI = p.CloseUIButton
+            local CloseUIShadow = Instance.new("ImageLabel")
+            local UIPaddingCloseUI_1 = Instance.new("UIPadding")
+            local BackgroundCloseUI_1 = Instance.new("ImageButton")  -- Changed to ImageButton
 
-    CloseUIShadow.Name = "CloseUIShadow"
-    CloseUIShadow.Parent = ScreenGui
-    CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163,162,165)
-    CloseUIShadow.BackgroundTransparency = 1
-    CloseUIShadow.Position = UDim2.new(0, 0,0.200000003, 0)
-    CloseUIShadow.Size = UDim2.new(0, 50, 0, 50)  -- Square for picture
-    CloseUIShadow.Image = "rbxassetid://1316045217"
-    CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
-    CloseUIShadow.ImageTransparency = 0.5
-    CloseUIShadow.ScaleType = Enum.ScaleType.Slice
-    CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-    CloseUIShadow.Visible = CloseUI.Enabled
+            CloseUIShadow.Name = "CloseUIShadow"
+            CloseUIShadow.Parent = ScreenGui
+            CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163,162,165)
+            CloseUIShadow.BackgroundTransparency = 1
+            CloseUIShadow.Position = UDim2.new(0, 0,0.200000003, 0)
+            CloseUIShadow.Size = UDim2.new(0, 50, 0, 50)  -- Square for picture
+            CloseUIShadow.Image = "rbxassetid://1316045217"
+            CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
+            CloseUIShadow.ImageTransparency = 0.5
+            CloseUIShadow.ScaleType = Enum.ScaleType.Slice
+            CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+            CloseUIShadow.Visible = CloseUI.Enabled
 
-    addToTheme('Shadow', CloseUIShadow)
+            addToTheme('Shadow', CloseUIShadow)
 
-    UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
-    UIPaddingCloseUI_1.Parent = CloseUIShadow
-    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0,5)
-    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0,5)
-    UIPaddingCloseUI_1.PaddingRight = UDim.new(0,5)
-    UIPaddingCloseUI_1.PaddingTop = UDim.new(0,5)
+           UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
+           UIPaddingCloseUI_1.Parent = CloseUIShadow
+           UIPaddingCloseUI_1.PaddingBottom = UDim.new(0,5)
+           UIPaddingCloseUI_1.PaddingLeft = UDim.new(0,5)
+           UIPaddingCloseUI_1.PaddingRight = UDim.new(0,5)
+           UIPaddingCloseUI_1.PaddingTop = UDim.new(0,5)
+     
+           BackgroundCloseUI_1.Name = "BackgroundCloseUI"
+           BackgroundCloseUI_1.Parent = CloseUIShadow
+           BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
+           BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
+           BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
+           BackgroundCloseUI_1.BorderSizePixel = 0
+           BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
+           BackgroundCloseUI_1.Size = UDim2.new(1, 0,1, 0)
+           BackgroundCloseUI_1.AutoButtonColor = false
+           BackgroundCloseUI_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=124681933147191"
+           BackgroundCloseUI_1.ScaleType = Enum.ScaleType.Fit
 
-    BackgroundCloseUI_1.Name = "BackgroundCloseUI"
-    BackgroundCloseUI_1.Parent = CloseUIShadow
-    BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
-    BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
-    BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
-    BackgroundCloseUI_1.BorderSizePixel = 0
-    BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
-    BackgroundCloseUI_1.Size = UDim2.new(1, 0,1, 0)
-    BackgroundCloseUI_1.AutoButtonColor = false
-    BackgroundCloseUI_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=124681933147191"
-    BackgroundCloseUI_1.ScaleType = Enum.ScaleType.Fit
+           addToTheme('Background', BackgroundCloseUI_1)
 
-    addToTheme('Background', BackgroundCloseUI_1)
+           -- Add stroke
+           local Stroke = Instance.new("UIStroke")
+           Stroke.Parent = BackgroundCloseUI_1
+           Stroke.Color = Color3.fromRGB(255, 255, 255)
+           Stroke.Thickness = 1
+           Stroke.Transparency = 0.8
+ 
+           local UICornerCloseUI_1 = Instance.new("UICorner")
+           UICornerCloseUI_1.Name = "UICornerCloseUI"
+           UICornerCloseUI_1.Parent = BackgroundCloseUI_1
+           UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
 
-    -- Add stroke
-    local Stroke = Instance.new("UIStroke")
-    Stroke.Parent = BackgroundCloseUI_1
-    Stroke.Color = Color3.fromRGB(255, 255, 255)
-    Stroke.Thickness = 1
-    Stroke.Transparency = 0.8
-
-    local UICornerCloseUI_1 = Instance.new("UICorner")
-    UICornerCloseUI_1.Name = "UICornerCloseUI"
-    UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-    UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
-
-    local Click = click(CloseUIShadow)
-    lak(Click, CloseUIShadow)
-    Click.MouseButton1Click:Connect(function()
-        pcall(closeui)
-    end)
-end
-
+           local Click = click(CloseUIShadow)
+           lak(Click, CloseUIShadow)
+           Click.MouseButton1Click:Connect(function()
+               pcall(closeui)
+           end)
+       end
+	end
 	return Tabs
 end
 
