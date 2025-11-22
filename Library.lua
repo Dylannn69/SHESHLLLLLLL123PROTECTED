@@ -4651,7 +4651,7 @@ function Library:Window(p)
 			CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163,162,165)
 			CloseUIShadow.BackgroundTransparency = 1
 			CloseUIShadow.Position = UDim2.new(0, 0,0.200000003, 0)
-            CloseUIShadow.Size = UDim2.new(0, 50, 0, 50)  -- Perfect square
+            CloseUIShadow.Size = UDim2.new(0, 40, 0, 40)  -- Perfect square
 			CloseUIShadow.Image = "rbxassetid://1316045217"
 			CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
 			CloseUIShadow.ImageTransparency = 0.5
@@ -4685,8 +4685,8 @@ function Library:Window(p)
             local Stroke = Instance.new("UIStroke")
             Stroke.Parent = BackgroundCloseUI_1
             Stroke.Color = Color3.fromRGB(255, 255, 255)
-            Stroke.Thickness = 1
-            Stroke.Transparency = 0.8
+            Stroke.Thickness = 4
+            Stroke.Transparency = 0.6
 
             -- ADD YOUR PICTURE
             local CloseIcon = Instance.new("ImageLabel")
