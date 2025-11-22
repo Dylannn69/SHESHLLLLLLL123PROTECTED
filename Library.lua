@@ -207,32 +207,32 @@ do
 
 	local IconList = loadstring(game:HttpGet('https://raw.githubusercontent.com/Dummyrme/Library/refs/heads/main/Icon.lua'))()
 	function gl(i)
-    local iconData = IconList.Icons[i]
-    if iconData then
-        local spriteSheet = IconList.Spritesheets[tostring(iconData.Image)]
-        if spriteSheet then
-            return {
-                Image = spriteSheet,
-                ImageRectSize = iconData.ImageRectSize,
-                ImageRectPosition = iconData.ImageRectPosition,
-            }
-        end
-    end
-    if type(i) == 'string' and not i:find('rbxassetid://') then
-        return {
-            Image = "rbxassetid://".. i,
-            ImageRectSize = Vector2.new(0, 0),
-            ImageRectPosition = Vector2.new(0, 0),
-        }
-    elseif type(i) == 'number' then
-        return {
-            Image = "rbxassetid://".. i,
-            ImageRectSize = Vector2.new(0, 0),
-            ImageRectPosition = Vector2.new(0, 0),
-        }
-    else
-        return i
-        end
+		local iconData = IconList.Icons[i]
+		if iconData then
+			local spriteSheet = IconList.Spritesheets[tostring(iconData.Image)]
+			if spriteSheet then
+				return {
+					Image = spriteSheet,
+					ImageRectSize = iconData.ImageRectSize,
+					ImageRectPosition = iconData.ImageRectPosition,
+				}
+			end
+		end
+		if type(i) == 'string' and not i:find('rbxassetid://') then
+			return {
+				Image = "rbxassetid://".. i,
+				ImageRectSize = Vector2.new(0, 0),
+				ImageRectPosition = Vector2.new(0, 0),
+			}
+		elseif type(i) == 'number' then
+			return {
+				Image = "rbxassetid://".. i,
+				ImageRectSize = Vector2.new(0, 0),
+				ImageRectPosition = Vector2.new(0, 0),
+			}
+		else
+			return i
+		end
 	end
 	function tw(info)
 		return Tw:Create(info.v,TweenInfo.new(info.t, info.s, Enum.EasingDirection[info.d]),info.g)
@@ -1202,15 +1202,15 @@ function Library:Window(p)
 	UIListLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
 
 	Close_1.Name = "Close"
-Close_1.Parent = Ct_1
-Close_1.Active = true
-Close_1.BackgroundColor3 = Color3.fromRGB(29, 28, 38)  -- Background color
-Close_1.BackgroundTransparency = 0  -- Make background visible
-Close_1.BorderColor3 = Color3.fromRGB(0,0,0)
-Close_1.BorderSizePixel = 0
-Close_1.LayoutOrder = 3
-Close_1.Size = UDim2.new(0, 16, 0, 16)  -- 40x40 box
-Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=124681933147191"
+	Close_1.Parent = Ct_1
+	Close_1.Active = true
+	Close_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Close_1.BackgroundTransparency = 1
+	Close_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Close_1.BorderSizePixel = 0
+	Close_1.LayoutOrder = 3
+	Close_1.Size = UDim2.new(0, 16,0, 16)
+	Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=124681933147191"
 
 	ChSize_1.Name = "Size"
     ChSize_1.Parent = Ct_1
@@ -4721,7 +4721,8 @@ Close_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&a
 				pcall(closeui)
 			end)
 		end
-end
+	end
+
 	return Tabs
 end
 
