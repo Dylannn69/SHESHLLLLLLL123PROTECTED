@@ -1255,16 +1255,16 @@ function Library:Window(p)
 	UIListLayout_7.VerticalAlignment = Enum.VerticalAlignment.Center
 
 	Icon_1.Name = "Icon"
-	Icon_1.Parent = Td_1
-	Icon_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    Icon_1.Parent = Td_1
+    Icon_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
 	Icon_1.BackgroundTransparency = 1
-	Icon_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	Icon_1.BorderSizePixel = 0
-	Icon_1.Size = UDim2.new(0, 30,0, 30)
-	Icon_1.Image = gl(Icon).Image
-	Icon_1.ImageRectSize = gl(Icon).ImageRectSize
-	Icon_1.ImageRectOffset = gl(Icon).ImageRectPosition
-
+    Icon_1.BorderColor3 = Color3.fromRGB(0,0,0)
+    Icon_1.BorderSizePixel = 0
+    Icon_1.Size = UDim2.new(0, 30,0, 30)
+    Icon_1.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=124681933147191"  -- Your custom icon
+    Icon_1.ImageRectSize = Vector2.new(0, 0)  -- Clear sprite sheet
+    Icon_1.ImageRectOffset = Vector2.new(0, 0)  -- Clear sprite sheet
+	
 	addToTheme('Text & Icon', Icon_1)
 
 	Title_1.Name = "Title"
